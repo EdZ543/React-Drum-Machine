@@ -1,0 +1,72 @@
+:root {
+  --padWidth: 10vw;
+  --padHeight: 10vh;
+}
+
+body,
+html {
+  background-image: url("https://wallpapercave.com/wp/wp6751729.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#drum-machine {
+  width: calc(var(--padWidth) * 3 + 32px);
+}
+
+.drum-pad {
+  float: left;
+  width: var(--padWidth);
+  height: var(--padHeight);
+  box-sizing: border-box;
+  margin: 5px;
+
+  padding: 20px;
+  cursor: pointer;
+  background-color: #333333;
+  color: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: all 0ms ease-in-out;
+  text-align: start;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Jua", sans-serif;
+  text-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.drum-pad:hover {
+  background-color: #404040;
+}
+.drum-pad:active {
+  transform: scale(1.2) rotate(5deg);
+}
+
+#current-text {
+  position: absolute;
+  font-family: "Jua", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 40px;
+  text-align: center;
+  bottom: calc(50vh - var(--padHeight) - 170px);
+}
+
+#header-text {
+  position: absolute;
+  font-family: "Jua", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  top: 50px;
+}
